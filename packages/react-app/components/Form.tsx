@@ -9,16 +9,9 @@ const  Form = () => {
     return (
         <div className="flex flex-col justify-center items-center">
             <div className="h1">
-                This is the form
+                The Lifeline App
             </div>
-            <div>No Wallet Connected</div>
-            <form>
-                <label>
-                    Name:
-                    <input type="text" name="name" />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
+
         </div>
     );
 }

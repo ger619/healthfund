@@ -23,20 +23,20 @@ function NewForm() {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">Name</label>
               <div className="mt-1">
-                <input id="password" name="password" type="password" autoComplete="current-password" required className="" />
+                <input id="password" name="password" type="text" autoComplete="current-password" required className="" />
               </div>
             </div>
 
             <div>
-              <label htmlFor="company-size" className="block text-sm font-medium text-gray-700">Company size</label>
+              <label htmlFor="company-size" className="block text-sm font-medium text-gray-700">Choose Service</label>
               <div className="mt-1">
                 <select name="company-size" id="company-size" className="">
-                  <option value="">Please select</option>
-                  <option value="small">1 to 10 employees</option>
-                  <option value="medium">11 to 50 employees</option>
-                  <option value="large">50+ employees</option>
+                  <option value="">Services</option>
+                  <option value="small">Consultation</option>
+                  <option value="medium">Therapy</option>
+                  <option value="large">Surgery</option>
                 </select>
               </div>
             </div>

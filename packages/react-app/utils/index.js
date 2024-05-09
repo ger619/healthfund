@@ -1,8 +1,12 @@
 import './Lock.json';
 import { ethers } from 'ethers';
 
-export const getLockContract = (address, provider) => {
-    const abi = require('./Lock.json').abi;
+const address = '0x1e48283a1ef0f9ed61a13e8cdc7d21e0a2776188';
+const provider = new ethers.providers.JsonRpcProvider('http://localhost:8545');
+
+export const getLockContract = (address) => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    // const {ethers }
     return new ethers.Contract(address, abi, provider);
 
 }
