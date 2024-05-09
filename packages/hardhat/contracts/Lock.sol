@@ -17,10 +17,23 @@ interface IERC20Token {
 }
 
 contract Lock {
-    uint internal productLength = 0 ;
+    uint internal patientLength = 0 ;
     address internal tokenAddress = 0xC35C72978dd83B0E8698dFFB764b572a75e53383;
 
-    struct Product {
-
+    struct Patient {
+        uint id;
+        string name;
+        uint price;
+        string quantity;
+        uint sold;
+        bool isSoldOut;
     }
+
+    mapping(uint => Patient) internal patients;
+
+    function addPatient(string memory name, uint price, string memory quantity) public {
+        patientLength++;
+        patients[patientLength] = Patient(patientLength, name, price, quantity, 0, false);
+    }
+
 }
